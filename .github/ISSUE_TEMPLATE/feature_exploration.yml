@@ -1,0 +1,40 @@
+name: "Feature exploration"
+description: "Demande d'ajout d'une fonctionnalité pour le jeu d'exploration"
+title: "[Feature] "
+labels: ["feature", "exploration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de détailler la fonctionnalité demandée.
+  - type: dropdown
+    id: palier
+    attributes:
+      label: Palier concerné
+      options:
+        - base28
+        - base44x48
+        - base64
+    validations:
+      required: true
+  - type: textarea
+    id: objectif
+    attributes:
+      label: Objectif
+      description: Quel est le résultat attendu ?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Détails techniques
+      description: Modules/fichiers impactés, contraintes, dépendances.
+    validations:
+      required: true
+  - type: textarea
+    id: done_criteria
+    attributes:
+      label: Critères d'acceptation
+      description: Liste des comportements attendus pour valider la feature.
+    validations:
+      required: true

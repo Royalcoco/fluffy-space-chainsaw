@@ -1,0 +1,43 @@
+name: "Bug exploration"
+description: "Signaler un bug dans le jeu d'exploration"
+title: "[Bug] "
+labels: ["bug", "exploration"]
+body:
+  - type: dropdown
+    id: palier
+    attributes:
+      label: Palier concerné
+      options:
+        - base28
+        - base44x48
+        - base64
+    validations:
+      required: true
+  - type: textarea
+    id: bug
+    attributes:
+      label: Description du bug
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Décris les étapes dans l'ordre.
+      placeholder: |
+        1. Aller à ...
+        2. Appuyer sur ...
+        3. Observer ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / captures
+      description: Colle les logs utiles ou ajoute des captures.
