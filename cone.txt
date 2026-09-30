@@ -1,34 +1,67 @@
-CONE FRAMEWORK - COPILOT PLANS CONTEXT
+EXPLORATION GAME - SIZE PALIER ROADMAP
+=======================================
 
-Project: Copilot Features & Plans Integration
-Status: Exploratory
-Date: 2026-09-30
+PROJECT: Convert fluffy-space-chainsaw into modular exploration game
+CONSTRAINT: Iterative growth through base28 → base44x48 → base64 paliers
 
-=== CONE STRUCTURE ===
-C - Core Requirements
-O - Objectives & Outcomes
-N - Navigation & Architecture
-E - Execution & Milestones
+=== PALIER 1: BASE28 ===
+Grid Size: ~28x28 cells
+Scope: Minimal viable exploration game
+Features:
+  - Single map layout
+  - Basic tile system (. # S O)
+  - Player movement & simple navigation
+  - Core game loop
 
-=== HYPOTHESIS ===
-This appears to be a planning document for organizing
-Copilot feature development using a cone-shaped
-information hierarchy - starting broad at the top
-and narrowing to specific implementation details.
+Deliverables:
+  - map[28][28] data structure
+  - Tile renderer
+  - Player controller
+  - Basic collision detection
 
-=== CONTEXT ASSUMPTIONS ===
-- Repository: fluffy-space-chainsaw (exploration game base28→base44x48→base64)
-- Path: features/copilot/plans
-- Framework: CONE methodology for structured planning
-- Focus: AI/Copilot integration planning
+=== PALIER 2: BASE44x48 ===
+Grid Size: 44x48 cells
+Scope: Expanded exploration with better level design
+Features:
+  - Multiple room/zone system
+  - Enhanced tile variety
+  - Room transitions
+  - Environmental interaction basics
+  - AI-driven refactoring from base28
 
-=== NOTES ===
-This is an intentional "wrong guess" - the actual 
-cone.txt content may relate to:
-- Geometric/mathematical cone concepts
-- Data structure optimization
-- Network topology
-- Game mechanics (cone of vision/influence)
-- Or something completely different
+Deliverables:
+  - map[48][44] data structure
+  - Room manager
+  - Transition logic
+  - Enhanced tile mechanics
+  - Documentation: docs/formulaire_github_base44x48.md
 
-Please provide actual context to replace this placeholder.
+=== PALIER 3: BASE64 ===
+Grid Size: 64x64 cells (or larger dynamic)
+Scope: Full exploration game with advanced features
+Features:
+  - Large procedural/handcrafted worlds
+  - Advanced NPC systems
+  - Quest/dialogue systems
+  - Inventory & item mechanics
+  - Save/load systems
+  - Advanced visual polish
+
+Deliverables:
+  - Dynamic map system
+  - NPC/quest framework
+  - Persistence layer
+  - UI/UX polish
+
+=== KEY PRINCIPLES ===
+- Each palier is backward compatible (can play base28 within base44x48 bounds)
+- Code should be modular and refactorable via AI prompts
+- Track "found/built" lines in PRs to understand codebase evolution
+- Use French documentation for clarity with international AI tools
+- Every PR should map to a specific palier stage
+
+=== TRACKING ===
+PR #1 (merged): GitHub/AI templates for base44x48
+PR #2 (open): French templates & technical specs for all paliers
+
+Next: Implement base28 MVP → expand to base44x48 → scale to base64
